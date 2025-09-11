@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autour Asia - BioLink</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #004d40;
+      color: #fff;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: #004d40;
+      color: #fff;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1.3rem;
+      transition: background 0.3s;
+    }
+    .social-icons a:hover {
+      background: #00796b;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #004d40;
+    }
+
+    .services, .avis {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .share {
+      text-align: center;
+    }
+    .share-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .share-buttons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #004d40;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: background 0.3s;
+    }
+    .share-buttons a:hover {
+      background: #00796b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/4d66f3d7c5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Title & Short Description -->
+  <header>
+    <h1>Autour Asia</h1>
+    <p>Voyages authentiques et sur mesure au Vietnam et en Asie</p>
+
+    <!-- Social Profiles -->
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="mailto:contact@autourasia.fr"><i class="fas fa-envelope"></i></a>
+    </div>
+  </header>
+
+  <!-- Qui sommes-nous -->
+  <section>
+    <h2>Qui sommes-nous ?</h2>
+    <p>
+      Texte d'exemple : Nous sommes une agence locale basée à Hanoï, passionnée par l’Asie et ses richesses culturelles. 
+      Notre objectif est de créer pour vous des expériences authentiques et inoubliables. 
+      (👉 Vous pouvez remplacer ce texte par le vôtre)
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section>
+    <h2>Nos Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Voyages sur mesure</h3>
+        <p>Des itinéraires adaptés à vos envies et votre rythme.</p>
+      </div>
+      <div class="card">
+        <h3>Circuits authentiques</h3>
+        <p>À la découverte de la culture, de la nature et des habitants.</p>
+      </div>
+      <div class="card">
+        <h3>Accompagnement local</h3>
+        <p>Une équipe francophone sur place pour vous assister.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avis -->
+  <section>
+    <h2>Avis de nos voyageurs</h2>
+    <div class="avis">
+      <div class="card">
+        <p>"Un voyage inoubliable grâce à Autour Asia. Organisation parfaite !"</p>
+        <strong>- Marie & Paul</strong>
+      </div>
+      <div class="card">
+        <p>"Super expérience au Vietnam, une équipe très professionnelle."</p>
+        <strong>- Jean-Luc</strong>
+      </div>
+      <div class="card">
+        <p>"Je recommande vivement cette agence locale, accueil chaleureux."</p>
+        <strong>- Sophie</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partagez -->
+  <section class="share">
+    <h2>Partagez cette page</h2>
+    <div class="share-buttons">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://autourasia.fr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/intent/tweet?url=https://autourasia.fr" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://autourasia.fr" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:?subject=Découvrez Autour Asia&body=Voyages en Asie : https://autourasia.fr"><i class="fas fa-envelope"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Autour Asia - Tous droits réservés.
+  </footer>
+
+</body>
+</html>
