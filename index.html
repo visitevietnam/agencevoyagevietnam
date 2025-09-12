@@ -147,6 +147,143 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <link rel="icon" type="image/png" href="images/90x90-logo-autour-asia.png">
+  
+  <!-- Schema (Organization + LocalBusiness + Services via OfferCatalog + Reviews/AggregateRating + FAQPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["Organization", "LocalBusiness"],
+        "name": "Autour Asia",
+        "url": "https://autourasia.fr",
+        "logo": "https://visitevietnam.github.io/agencevoyagevietnam/images/90x90-logo-autour-asia.png",
+        "image": "https://visitevietnam.github.io/agencevoyagevietnam/images/900-ninh-binh.jpg",
+        "description": "Agence voyage Vietnam, agence locale Vietnam à Hanoï. Circuits sur mesure, voyages authentiques et services francophones au Vietnam.",
+        "email": "info@autourasia.fr",
+        "telephone": "+84 971 33 77 08",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "MAY Place, n°38, 113 allée, rue Hoang Cau, quartier de O Cho Dua",
+          "addressLocality": "Hanoï",
+          "addressCountry": "Vietnam"
+        },
+        "sameAs": [
+          "https://facebook.com/autourasia",
+          "https://instagram.com/autourasia",
+          "https://linkedin.com/company/autour-asia-fr",
+          "https://youtube.com/@autourasia",
+          "https://tiktok.com/@autourasia",
+          "https://pinterest.com/autourasia",
+          "https://threads.com/autourasia",
+          "https://x.com/autourasia"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Catalog des services Autour Asia",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "15 jours au Vietnam",
+                "description": "Découvrez le Vietnam en 15 jours : Hanoï, baie d’Halong et rizières de Sapa."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "2 semaines au Vietnam",
+                "description": "Circuit 2 semaines au Vietnam : culture, nature et rencontres authentiques."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "3 semaines au Vietnam",
+                "description": "Voyage de 3 semaines pour explorer le nord, le centre et le sud du Vietnam."
+              }
+            }
+          ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "127"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Marie & Paul" },
+            "reviewBody": "Un circuit de 14 jours au Vietnam parfaitement organisé : guides compétents, transferts fluides et paysages magnifiques.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Jean-Luc" },
+            "reviewBody": "Nous avons choisi un voyage sur mesure Vietnam. Autour Asia a su adapter l’itinéraire à notre famille avec une organisation impeccable.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Sophie" },
+            "reviewBody": "Excellente agence de voyage Hanoï ! Séjour authentique et sans souci, parfaitement pensé du début à la fin.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+          }
+        ]
+      },
+  
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Pourquoi choisir une agence locale au Vietnam comme Autour Asia ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Une agence locale au Vietnam connaît parfaitement le pays, propose des circuits authentiques et assure un contact direct sans intermédiaire."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Proposez-vous des voyages sur mesure au Vietnam ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, Autour Asia crée des circuits personnalisés selon vos envies : durée, activités, budget et rythme de voyage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Vos guides parlent-ils français ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nos guides francophones sont expérimentés et passionnés, ce qui facilite la découverte culturelle et les échanges avec les habitants."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Combien de temps faut-il pour visiter le Vietnam ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nous conseillons entre 2 et 3 semaines pour découvrir le pays du nord au sud, mais nous proposons aussi des circuits plus courts de 10 à 15 jours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Puis-je combiner Vietnam avec Laos, Cambodge ou Thaïlande ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, nous organisons des voyages combinés Vietnam – Laos – Cambodge – Thaïlande pour explorer plusieurs pays d’Asie du Sud-Est."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
 </head>
 <body>
 
@@ -176,7 +313,7 @@
   <!-- Qui sommes-nous -->
   <section>
     <h2>Qui sommes-nous ?</h2>
-    <p>En tant qu’agence voyage Vietnam et agence locale Vietnam basée à Hanoï, Autour Asia vous invite à découvrir le pays et toute l'Asie du Sud-Est de manière authentique et immersive. Nous sommes une agence francophone Vietnam passionnée par la création de séjours uniques et mémorables, conçus pour vous faire vivre une expérience qui dépasse vos attentes. Notre mission est simple : vous guider à travers les trésors cachés de la région pour une aventure inoubliable, où authenticité et découvertes sont au cœur de chaque étape.</p>
+    <p>En tant qu’<a href="https://autourasia.fr"><strong>agence voyage Vietnam</strong></a> et <strong>agence locale Vietnam</strong> basée à Hanoï, Autour Asia vous invite à découvrir le pays et toute l'Asie du Sud-Est de manière authentique et immersive. Nous sommes une <strong>agence francophone Vietnam</strong> passionnée par la création de séjours uniques et mémorables, conçus pour vous faire vivre une expérience qui dépasse vos attentes. Notre mission est simple : vous guider à travers les trésors cachés de la région pour une aventure inoubliable, où authenticité et découvertes sont au cœur de chaque étape.</p>
     <p>Chez Autour Asia, nous sommes convaincus que la satisfaction de nos clients est la clé de notre succès. Que votre rêve soit d'explorer les marchés flottants du Mékong, les rizières en terrasse de Sapa, les plages de Thaïlande ou les temples d’Angkor au Cambodge, notre expertise vous garantit un voyage exceptionnel.</p>
     <p>Nous partageons notre passion et nos connaissances à travers notre blog de voyage, un espace dédié aux amoureux de l'Asie. Vous y trouverez des conseils, des itinéraires, et des expériences authentiques pour vous aider à préparer votre prochain séjour. Nous vous proposons des articles détaillés sur les incontournables de la région, des recommandations sur mesure et des idées de circuits hors des sentiers battus. Que vous soyez amateur de trekking, de gastronomie ou d'histoire, notre blog est votre compagnon idéal pour explorer l'Asie autrement.</p>
     <p>Nous sommes là pour vous aider à concevoir le voyage de vos rêves. Pour toute question ou assistance, n'hésitez pas à nous contacter par email, téléphone ou à nous rendre visite à notre agence à Hanoï.</p>
@@ -186,8 +323,8 @@
       <li>Adresse : MAY Place, n°38, 113 allée, rue Hoang Cau, quartier de O Cho Dua, Hanoï, Vietnam</li>
     </ul>
     <div class="qui-img">
-      <img src="images/900-ninh-binh.jpg" alt="Notre équipe">
-      <em>Photo d’exemple - notre équipe à Hanoï</em>
+      <img src="images/900-ninh-binh.jpg" alt="Voyage Vietnam">
+      <em>Voyage Vietnam avec Autour Asia</em>
     </div>
   </section>
 
