@@ -142,6 +142,50 @@
       transition: background 0.3s;
     }
     .floating-buttons a:hover { background: #00796b; }
+
+    /* Stars */
+    .stars {
+      color: #FFD700;
+      margin-top: 0.3rem;
+    }
+  
+    /* FAQ Section */
+    .faq {
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+    .faq-item {
+      border-bottom: 1px solid #ddd;
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      cursor: pointer;
+      background: #fff;
+      font-weight: 600;
+      color: #377e6a;
+      transition: background 0.3s;
+    }
+    .faq-question:hover {
+      background: #f1f1f1;
+    }
+    .faq-answer {
+      display: none;
+      padding: 0 1rem 1rem;
+      color: #444;
+      font-size: 0.95rem;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    .faq-item i {
+      transition: transform 0.3s;
+    }
+    .faq-item.active i {
+      transform: rotate(180deg);
+    }
   </style>
   <!-- Font Awesome CDN -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -358,20 +402,98 @@
         <img src="images/720-cuisine-hoian.jpg" alt="Agence Francophone Vietnam">
         <p>"Un circuit de 14 jours au Vietnam parfaitement organisé : guides compétents, transferts fluides et paysages magnifiques. Grâce à Autour Asia, nous avons découvert un pays fascinant, en toute sérénité et avec un accompagnement constant."</p>
         <strong>- Marie & Paul</strong>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
       </div>
+    
       <div class="card">
         <img src="images/720-hanoi-3.jpg" alt="Agence Locale Vietnam">
         <p>"Nous avons choisi un voyage sur mesure Vietnam et tout a dépassé nos attentes. Autour Asia a su adapter l’itinéraire à notre famille, combinant culture, nature et moments de détente. Une organisation impeccable et une équipe toujours à l’écoute."</p>
         <strong>- Jean-Luc</strong>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
       </div>
+    
       <div class="card">
         <img src="images/720-mekong-1.jpg" alt="Agence Voyage Vietnam">
         <p>"Excellente agence de voyage Hanoï ! Tout a été pris en charge, de l’accueil chaleureux à l’accompagnement quotidien. Nous avons profité d’un séjour authentique et sans souci, parfaitement pensé du début à la fin."</p>
         <strong>- Sophie</strong>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>FAQ - Questions fréquentes</h2>
+  
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Pourquoi choisir une agence locale au Vietnam comme Autour Asia ?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        Une agence locale au Vietnam connaît parfaitement le pays, propose des circuits authentiques et assure un contact direct sans intermédiaire.
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Proposez-vous des voyages sur mesure au Vietnam ?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        Oui, Autour Asia crée des circuits personnalisés selon vos envies : durée, activités, budget et rythme de voyage.
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Vos guides parlent-ils français ?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        Nos guides francophones sont expérimentés et passionnés, ce qui facilite la découverte culturelle et les échanges avec les habitants.
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Combien de temps faut-il pour visiter le Vietnam ?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        Nous conseillons entre 2 et 3 semaines pour découvrir le pays du nord au sud, mais nous proposons aussi des circuits plus courts de 10 à 15 jours.
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Puis-je combiner Vietnam avec Laos, Cambodge ou Thaïlande ?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        Oui, nous organisons des voyages combinés Vietnam – Laos – Cambodge – Thaïlande pour explorer plusieurs pays d’Asie du Sud-Est.
+      </div>
+    </div>
+  </section>
+  
   <!-- Partagez -->
   <section class="share">
     <h2>Partagez cette page</h2>
@@ -393,6 +515,15 @@
     <a href="https://wa.me/84971337708" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     <a href="mailto:info@autourasia.fr" title="Email"><i class="fas fa-envelope"></i></a>
   </div>
+
+  <script>
+    document.querySelectorAll(".faq-question").forEach(q => {
+      q.addEventListener("click", () => {
+        const item = q.parentElement;
+        item.classList.toggle("active");
+      });
+    });
+  </script>
 
 </body>
 </html>
