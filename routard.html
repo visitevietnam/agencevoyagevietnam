@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide Routard Vietnam - Agence Voyage Vietnam Francophone</title>
+  <style>
+    /* Styles généraux inspirés de l'exemple */
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    
+    /* Header principal */
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: linear-gradient(rgba(55, 126, 106, 0.9), rgba(55, 126, 106, 0.95)), url('https://visitevietnam.github.io/agencevoyagevietnam/images/900-ninh-binh.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      position: relative;
+    }
+    
+    .logo-container {
+      margin-bottom: 1rem;
+    }
+    
+    .logo-container img {
+      width: 120px;
+      height: auto;
+      border-radius: 8px;
+    }
+    
+    header h1 { 
+      margin: 0; 
+      font-size: 2.2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+    
+    header .subtitle { 
+      margin-top: 0.5rem; 
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Table des matières - Menu principal */
+    .table-matiere {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(5px);
+      border-radius: 12px;
+      padding: 1.5rem;
+      max-width: 900px;
+      margin: 2rem auto 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .table-matiere h3 {
+      margin-top: 0;
+      color: #fff;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+    
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.8rem;
+    }
+    
+    .menu-grid a {
+      background: rgba(255, 255, 255, 0.85);
+      color: #377e6a;
+      padding: 0.8rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .menu-grid a:hover {
+      background: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    /* Sections de contenu */
+    section {
+      padding: 2.5rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+    
+    section:nth-child(even) {
+      background: #f8fcfb;
+    }
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #377e6a;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #377e6a;
+      padding-bottom: 0.5rem;
+    }
+    
+    h3 {
+      color: #2a5f4e;
+      margin-top: 1.5rem;
+    }
+    
+    /* Styles pour les cartes */
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-left: 4px solid #377e6a;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+    
+    .card h3 {
+      margin-top: 0;
+      color: #377e6a;
+    }
+    
+    .card-icon {
+      font-size: 2rem;
+      color: #377e6a;
+      margin-bottom: 0.8rem;
+    }
+    
+    /* Styles pour les itinéraires */
+    .itineraire {
+      background: #f0f9f7;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #377e6a;
+    }
+    
+    .itineraire h4 {
+      margin-top: 0;
+      color: #2a5f4e;
+    }
+    
+    .itineraire ul {
+      padding-left: 1.2rem;
+    }
+    
+    .itineraire li {
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Styles pour les images */
+    .image-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    
+    .image-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .image-caption {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+    }
+    
+    /* Styles pour les boutons */
+    .btn {
+      display: inline-block;
+      background: #377e6a;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn:hover {
+      background: #2a5f4e;
+    }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #2a5f4e;
+      color: #fff;
+      margin-top: 3rem;
+    }
+    
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+    
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+    
+    .social-icons a:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    
+    /* Boutons flottants */
+    .floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      z-index: 1000;
+    }
+    
+    .floating-buttons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #377e6a;
+      color: #fff;
+      font-size: 1.3rem;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s;
+    }
+    
+    .floating-buttons a:hover {
+      background: #2a5f4e;
+      transform: scale(1.1);
+    }
+    
+    /* Menu mobile flottant */
+    .mobile-menu-btn {
+      display: none;
+    }
+    
+    .mobile-menu-content {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(55, 126, 106, 0.95);
+      z-index: 2000;
+      padding: 2rem;
+      overflow-y: auto;
+    }
+    
+    .mobile-menu-content.show {
+      display: block;
+    }
+    
+    .mobile-menu-content .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    
+    .mobile-menu-content h3 {
+      color: #fff;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .mobile-menu-links a {
+      background: rgba(255, 255, 255, 0.9);
+      color: #377e6a;
+      padding: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .mobile-menu-btn {
+        display: flex;
+      }
+      
+      .table-matiere {
+        display: none;
+      }
+      
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      header .subtitle {
+        font-size: 1rem;
+      }
+      
+      section {
+        padding: 1.5rem 1rem;
+      }
+    }
+    
+    /* Styles pour les astuces Routard */
+    .astuce {
+      background: #fff9e6;
+      border-left: 4px solid #ffc107;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .astuce h4 {
+      margin-top: 0;
+      color: #b8860b;
+    }
+    
+    /* Notation avec étoiles */
+    .stars {
+      color: #FFD700;
+      margin: 0.5rem 0;
+    }
+    
+    /* Carte de contact */
+    .contact-card {
+      background: #e8f5f2;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    /* Styles pour les prix */
+    .price {
+      font-weight: bold;
+      color: #377e6a;
+      font-size: 1.2rem;
+    }
+  </style>
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://visitevietnam.github.io/agencevoyagevietnam/images/90x90-logo-autour-asia.png">
+  
+  <!-- Schema Markup pour SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["Organization", "LocalBusiness", "TravelAgency"],
+        "name": "Guide Routard Vietnam - Agence Voyage Vietnam",
+        "url": "https://autourasia.fr",
+        "logo": "https://visitevietnam.github.io/agencevoyagevietnam/images/90x90-logo-autour-asia.png",
+        "image": "https://visitevietnam.github.io/agencevoyagevietnam/images/900-ninh-binh.jpg",
+        "description": "Guide de voyage Vietnam à la manière Routard. Agence voyage Vietnam francophone, agence locale Hanoi. Circuits 2 semaines au Vietnam, 21 jours au Vietnam.",
+        "email": "info@autourasia.fr",
+        "telephone": "+84 971 33 77 08",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "MAY Place, n°38, 113 allée, rue Hoang Cau, quartier de O Cho Dua",
+          "addressLocality": "Hanoï",
+          "addressCountry": "Vietnam"
+        },
+        "sameAs": [
+          "https://facebook.com/autourasia",
+          "https://instagram.com/autourasia",
+          "https://linkedin.com/company/autour-asia-fr",
+          "https://youtube.com/@autourasia"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Circuits Vietnam",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "2 semaines au Vietnam",
+                "description": "Circuit découverte du Vietnam en 14 jours : Nord, Centre et Sud"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "21 jours au Vietnam",
+                "description": "Voyage complet au Vietnam en 3 semaines pour explorer toutes les régions"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Agence locale Hanoi",
+                "description": "Services d'agence locale à Hanoi pour voyages sur mesure au Vietnam"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "WebPage",
+        "name": "Guide Routard Vietnam",
+        "description": "Guide de voyage Vietnam complet avec astuces, itinéraires et conseils pratiques",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Autour Asia"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Header principal -->
+  <header id="accueil">
+    <div class="logo-container">
+      <img src="https://visitevietnam.github.io/agencevoyagevietnam/images/90x90-logo-autour-asia.png" alt="Logo Autour Asia - Agence Voyage Vietnam">
+    </div>
+    <h1>Guide Routard Vietnam</h1>
+    <p class="subtitle">Le guide de voyage Vietnam authentique, à la manière Routard. Découvrez le Vietnam avec notre <strong>agence voyage Vietnam</strong> francophone basée à Hanoi.</p>
+    
+    <!-- Table des matières -->
+    <div class="table-matiere">
+      <h3>Sommaire du Guide</h3>
+      <div class="menu-grid">
+        <a href="#presentation"><i class="fas fa-book-open"></i> Présentation</a>
+        <a href="#infos-pratiques"><i class="fas fa-info-circle"></i> Infos Pratiques</a>
+        <a href="#destinations"><i class="fas fa-map-marked-alt"></i> Destinations</a>
+        <a href="#itineraire"><i class="fas fa-route"></i> Itinéraires</a>
+        <a href="#conseils"><i class="fas fa-lightbulb"></i> Conseils Routard</a>
+        <a href="#agence"><i class="fas fa-hands-helping"></i> Notre Agence</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section Présentation -->
+  <section id="presentation">
+    <h2><i class="fas fa-flag"></i> Présentation du Vietnam</h2>
+    <p>Le Vietnam, cette terre en forme de dragon, offre une incroyable diversité de paysages, de cultures et d'expériences. Des montagnes verdoyantes du Nord aux plages paradisiaques du Sud, en passant par les villes historiques et la cuisine mondialement reconnue, le Vietnam séduit tous les types de voyageurs.</p>
+    
+    <div class="astuce">
+      <h4><i class="fas fa-star"></i> Astuce Routard</h4>
+      <p>Pour un premier voyage, prévoyez au moins <strong>2 semaines au Vietnam</strong>. Cela vous permettra de découvrir les incontournables sans vous presser. Notre <strong>agence francophone Vietnam</strong> peut vous aider à créer l'itinéraire parfait.</p>
+    </div>
+    
+    <p>En tant qu'<strong>agence locale Hanoi</strong>, nous vous proposons des expériences authentiques, loin des sentiers battus. Notre approche s'inspire de l'esprit Routard : privilégier les rencontres, l'authenticité et les bons plans.</p>
+    
+    <div class="image-container">
+      <img src="https://visitevietnam.github.io/agencevoyagevietnam/images/900-ninh-binh.jpg" alt="Paysage de Ninh Binh, Vietnam">
+      <span class="image-caption">Les magnifiques paysages de Ninh Binh, surnommée la "Baie d'Halong terrestre"</span>
+    </div>
+  </section>
+
+  <!-- Section Infos Pratiques -->
+  <section id="infos-pratiques">
+    <h2><i class="fas fa-clipboard-list"></i> Infos Pratiques</h2>
+    
+    <div class="cards-container">
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-passport"></i>
+        </div>
+        <h3>Visa & Formalités</h3>
+        <p>Pour les Français, un visa ou une autorisation préalable (e-visa) est nécessaire. L'e-visa est valable 30 jours et coûte 25 USD. Notre <strong>agence voyage Vietnam</strong> peut vous aider dans les démarches.</p>
+      </div>
+      
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-plane"></i>
+        </div>
+        <h3>Meilleure période</h3>
+        <p>Le Vietnam s'étend sur 1650 km : la météo varie selon les régions. Généralement, novembre à avril est idéal. Pour un circuit de <strong>21 jours au Vietnam</strong>, prévoyez des vêtements adaptés aux différentes zones climatiques.</p>
+      </div>
+      
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-money-bill-wave"></i>
+        </div>
+        <h3>Budget & Argent</h3>
+        <p>Le Vietnam est une destination très abordable. Comptez 30-50€/jour/personne pour un voyage confortable. Notre <strong>agence locale Hanoi</strong> propose des circuits adaptés à tous les budgets.</p>
+      </div>
+    </div>
+    
+    <div class="astuce">
+      <h4><i class="fas fa-exchange-alt"></i> Change d'argent</h4>
+      <p>Ne changez pas à l'aéroport où les taux sont moins avantageux. Préférez les bijouteries ou banques en ville. Gardez des dollars US pour les visas à l'arrivée.</p>
+    </div>
+  </section>
+
+  <!-- Section Destinations -->
+  <section id="destinations">
+    <h2><i class="fas fa-map-marked-alt"></i> Destinations Immanquables</h2>
+    
+    <div class="cards-container">
+      <div class="card">
+        <h3>Nord Vietnam</h3>
+        <p><strong>Hanoi</strong> : La capitale millénaire avec ses ruelles du Vieux Quartier.</p>
+        <p><strong>Baie d'Halong</strong> : Classée UNESCO, une croisière est incontournable.</p>
+        <p><strong>Sapa</strong> : Rizières en terrasses et ethnies minoritaires.</p>
+        <p><strong>Ninh Binh</strong> : La "Baie d'Halong terrestre".</p>
+      </div>
+      
+      <div class="card">
+        <h3>Centre Vietnam</h3>
+        <p><strong>Hue</strong> : Ancienne capitale impériale et sa citadelle.</p>
+        <p><strong>Hoi An</strong> : Ville ancienne classée UNESCO, ambiance magique.</p>
+        <p><strong>Danang</strong> : Plages de sable fin et pont du Dragon.</p>
+        <p><strong>Dalat</strong> : Ville climatique et ses paysages romantiques.</p>
+      </div>
+      
+      <div class="card">
+        <h3>Sud Vietnam</h3>
+        <p><strong>Ho Chi Minh Ville</strong> : Métropole dynamique et historique.</p>
+        <p><strong>Delta du Mékong</strong> : Réseau de canaux et vie fluviale.</p>
+        <p><strong>Phu Quoc</strong> : Île paradisiaque aux plages de rêve.</p>
+        <p><strong>Dalat</strong> : Hauts plateaux et plantations de café.</p>
+      </div>
+    </div>
+    
+    <div class="astuce">
+      <h4><i class="fas fa-compass"></i> Itinéraire idéal</h4>
+      <p>Pour couvrir les trois régions, prévoyez un circuit de <strong>3 semaines au Vietnam</strong> : 7 jours dans le Nord, 7 jours dans le Centre, 7 jours dans le Sud. Notre <strong>agence francophone Vietnam</strong> peut personnaliser cet itinéraire selon vos envies.</p>
+    </div>
+  </section>
+
+  <!-- Section Itinéraires -->
+  <section id="itineraire">
+    <h2><i class="fas fa-route"></i> Itinéraires Recommandés</h2>
+    
+    <div class="itineraire">
+      <h4><i class="fas fa-calendar-week"></i> 2 semaines au Vietnam - Circuit Essentiel</h4>
+      <p>Itinéraire parfait pour un premier voyage qui combine culture, nature et détente.</p>
+      <ul>
+        <li><strong>Jours 1-3</strong> : Hanoi - Découverte de la capitale</li>
+        <li><strong>Jours 4-5</strong> : Baie d'Halong - Croisière 2 jours/1 nuit</li>
+        <li><strong>Jours 6-7</strong> : Ninh Binh - Paysages karstiques</li>
+        <li><strong>Jours 8-10</strong> : Hoi An - Ville ancienne et plages</li>
+        <li><strong>Jours 11-12</strong> : Ho Chi Minh Ville - Dynamisme du Sud</li>
+        <li><strong>Jours 13-14</strong> : Delta du Mékong - Vie fluviale</li>
+      </ul>
+      <p class="price">À partir de 1 250€/personne (vols internationaux non inclus)</p>
+      <a href="https://autourasia.fr/voyage-vietnam/2-semaines-vietnam.html" class="btn" target="_blank">Voir ce circuit</a>
+    </div>
+    
+    <div class="itineraire">
+      <h4><i class="fas fa-calendar-alt"></i> 21 jours au Vietnam - Découverte Complète</h4>
+      <p>Pour les voyageurs qui veulent prendre le temps de découvrir toutes les facettes du Vietnam.</p>
+      <ul>
+        <li><strong>Jours 1-5</strong> : Nord Vietnam (Hanoi, Sapa, Baie d'Halong)</li>
+        <li><strong>Jours 6-10</strong> : Centre Vietnam (Hue, Hoi An, Danang)</li>
+        <li><strong>Jours 11-14</strong> : Hauts Plateaux (Dalat, plantations de café)</li>
+        <li><strong>Jours 15-18</strong> : Sud Vietnam (Ho Chi Minh Ville, tunnels de Cu Chi)</li>
+        <li><strong>Jours 19-21</strong> : Delta du Mékong et retour</li>
+      </ul>
+      <p class="price">À partir de 1 850€/personne (vols internationaux non inclus)</p>
+      <a href="https://autourasia.fr/voyage-vietnam/3-semaines-vietnam.html" class="btn" target="_blank">Voir ce circuit</a>
+    </div>
+    
+    <div class="astuce">
+      <h4><i class="fas fa-users"></i> Voyage sur mesure</h4>
+      <p>Notre <strong>agence locale Hanoi</strong> crée des itinéraires personnalisés selon vos envies : voyage en famille, trekking, gastronomie, plongée, etc. Contactez-nous pour un devis gratuit.</p>
+    </div>
+  </section>
+
+  <!-- Section Conseils Routard -->
+  <section id="conseils">
+    <h2><i class="fas fa-lightbulb"></i> Conseils Routard & Bonnes Adresses</h2>
+    
+    <h3>Où manger ? Les bonnes adresses</h3>
+    <div class="cards-container">
+      <div class="card">
+        <h4>À Hanoi</h4>
+        <p><strong>Pho 10 Ly Quoc Su</strong> : Le meilleur Pho de Hanoi selon les locaux.</p>
+        <p><strong>Bun Cha Huong Lien</strong> : Où Obama a diné avec Anthony Bourdain.</p>
+        <p><strong>Quan An Ngon</strong> : Pour goûter toutes les spécialités vietnamiennes.</p>
+      </div>
+      
+      <div class="card">
+        <h4>À Hoi An</h4>
+        <p><strong>Morning Glory</strong> : Cuisine de rue raffinée par une chef célèbre.</p>
+        <p><strong>Banh Mi Phuong</strong> : Meilleur Banh Mi selon Anthony Bourdain.</p>
+        <p><strong>Central Market Food Stalls</strong> : Pour manger avec les locaux.</p>
+      </div>
+      
+      <div class="card">
+        <h4>À Ho Chi Minh Ville</h4>
+        <p><strong>Hum Vegetarian</strong> : Excellente cuisine végétarienne.</p>
+        <p><strong>Banh Xeo 46A</strong> : Crêpes vietnamiennes croustillantes.</p>
+        <p><strong>Bun Thit Nuong Nguyen Trung Truc</strong> : Vermicelles grillées délicieuses.</p>
+      </div>
+    </div>
+    
+    <h3>Conseils de transport</h3>
+    <p>Pour les longues distances, privilégiez le train de nuit (couchettes) ou l'avion domestique (Vietjet, Bamboo Airways). Pour les courtes distances, le bus local ou la voiture avec chauffeur organisée par notre <strong>agence voyage Vietnam</strong> sont idéaux.</p>
+    
+    <div class="astuce">
+      <h4><i class="fas fa-taxi"></i> Taxis et négociation</h4>
+      <p>Utilisez toujours les taxis avec compteur (Mai Linh, Vinasun) ou les apps (Grab). Pour les cyclos et tuk-tuks, négociez toujours le prix avant de monter.</p>
+    </div>
+  </section>
+
+  <!-- Section Notre Agence -->
+  <section id="agence">
+    <h2><i class="fas fa-hands-helping"></i> Notre Agence Locale</h2>
+    
+    <p>Nous sommes une <strong>agence locale Hanoi</strong> spécialisée dans le voyage sur mesure au Vietnam. Notre équipe francophone vous accompagne de A à Z pour créer le voyage de vos rêves.</p>
+    
+    <div class="cards-container">
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-comments"></i>
+        </div>
+        <h3>Agence Francophone Vietnam</h3>
+        <p>Tous nos conseillers et guides parlent français couramment. Nous comprenons vos attentes et pouvons vous conseiller au mieux.</p>
+      </div>
+      
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-map-pin"></i>
+        </div>
+        <h3>Agence Locale Hanoi</h3>
+        <p>Basés au cœur de Hanoi, nous connaissons parfaitement le terrain et avons accès aux meilleures adresses et partenaires locaux.</p>
+      </div>
+      
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <h3>Sur Mesure</h3>
+        <p>Nous créons des itinéraires 100% personnalisés selon vos envies, votre budget et votre rythme de voyage.</p>
+      </div>
+    </div>
+    
+    <div class="contact-card">
+      <h3>Pourquoi choisir notre agence ?</h3>
+      <ul>
+        <li>Équipe francophone basée à Hanoi</li>
+        <li>Conseils personnalisés et honnêtes</li>
+        <li>Prix directs sans intermédiaires</li>
+        <li>Assistance 24h/24 pendant votre voyage</li>
+        <li>Accès à des expériences authentiques</li>
+      </ul>
+      <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <span> (4.8/5 basé sur 127 avis)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Contact -->
+  <section id="contact">
+    <h2><i class="fas fa-envelope"></i> Contact & Devis</h2>
+    
+    <p>Vous projetez un voyage au Vietnam ? Contactez notre <strong>agence francophone Vietnam</strong> pour un devis gratuit et personnalisé.</p>
+    
+    <div class="contact-card">
+      <h3>Autour Asia - Agence Voyage Vietnam</h3>
+      <p><i class="fas fa-map-marker-alt"></i> <strong>Adresse</strong> : MAY Place, n°38, 113 allée, rue Hoang Cau, quartier de O Cho Dua, Hanoï, Vietnam</p>
+      <p><i class="fas fa-phone"></i> <strong>Téléphone</strong> : +84 971 33 77 08 (WhatsApp disponible)</p>
+      <p><i class="fas fa-envelope"></i> <strong>Email</strong> : info@autourasia.fr</p>
+      <p><i class="fas fa-clock"></i> <strong>Horaires</strong> : Lundi - Vendredi : 8h30-18h00 (heure locale)</p>
+      
+      <div class="social-icons">
+        <a href="https://facebook.com/autourasia" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/autourasia" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/company/autour-asia-fr" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://youtube.com/@autourasia" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+      
+      <a href="https://autourasia.fr/contact.html" class="btn" target="_blank">Demander un devis gratuit</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>Guide Routard Vietnam</strong> - Réalisé par Autour Asia, votre <strong>agence voyage Vietnam</strong> francophone</p>
+    <p>© 2025 Autour Asia - Tous droits réservés. | <a href="https://autourasia.fr" style="color: #fff; text-decoration: underline;" target="_blank">Visitez notre site principal</a></p>
+    <p style="font-size: 0.9rem; margin-top: 1rem;">Ce guide est régulièrement mis à jour. Dernière mise à jour : Mars 2025</p>
+  </footer>
+
+  <!-- Boutons flottants -->
+  <div class="floating-buttons">
+    <a href="#accueil" id="back-to-top" title="Retour en haut">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+    <a href="https://wa.me/84971337708" target="_blank" title="Contact WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="#" id="mobile-menu-btn" class="mobile-menu-btn" title="Menu">
+      <i class="fas fa-bars"></i>
+    </a>
+  </div>
+  
+  <!-- Menu mobile -->
+  <div class="mobile-menu-content" id="mobile-menu">
+    <button class="close-btn" id="close-menu-btn">&times;</button>
+    <h3>Menu du Guide</h3>
+    <div class="mobile-menu-links">
+      <a href="#accueil"><i class="fas fa-home"></i> Accueil</a>
+      <a href="#presentation"><i class="fas fa-book-open"></i> Présentation</a>
+      <a href="#infos-pratiques"><i class="fas fa-info-circle"></i> Infos Pratiques</a>
+      <a href="#destinations"><i class="fas fa-map-marked-alt"></i> Destinations</a>
+      <a href="#itineraire"><i class="fas fa-route"></i> Itinéraires</a>
+      <a href="#conseils"><i class="fas fa-lightbulb"></i> Conseils</a>
+      <a href="#agence"><i class="fas fa-hands-helping"></i> Notre Agence</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    </div>
+  </div>
+
+  <script>
+    // Gestion du menu mobile
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    
+    mobileMenuBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      mobileMenu.classList.add('show');
+    });
+    
+    closeMenuBtn.addEventListener('click', function() {
+      mobileMenu.classList.remove('show');
+    });
+    
+    // Fermer le menu en cliquant à l'extérieur
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target === mobileMenu) {
+        mobileMenu.classList.remove('show');
+      }
+    });
+    
+    // Gestion du bouton "Retour en haut"
+    const backToTopBtn = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        backToTopBtn.style.display = 'flex';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+    
+    // Animation fluide pour les ancres
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+          
+          // Fermer le menu mobile après clic
+          mobileMenu.classList.remove('show');
+        }
+      });
+    });
+    
+    // Ajouter une classe active aux liens de navigation lors du défilement
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.menu-grid a, .mobile-menu-links a');
+      
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= sectionTop - 150) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
