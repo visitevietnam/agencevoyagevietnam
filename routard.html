@@ -224,32 +224,6 @@
       margin-top: 3rem;
     }
     
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin: 1.5rem 0;
-      flex-wrap: wrap;
-    }
-    
-    .social-icons a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background: rgba(255, 255, 255, 0.15);
-      color: #fff;
-      border-radius: 50%;
-      text-decoration: none;
-      font-size: 1.1rem;
-      transition: background 0.3s;
-    }
-    
-    .social-icons a:hover {
-      background: rgba(255, 255, 255, 0.3);
-    }
-    
     /* Boutons flottants */
     .floating-buttons {
       position: fixed;
@@ -281,7 +255,7 @@
       transform: scale(1.1);
     }
     
-    /* Menu mobile flottant */
+    /* Menu mobile flottant - COMPACT */
     .mobile-menu-btn {
       display: none;
     }
@@ -293,49 +267,77 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(55, 126, 106, 0.95);
+      background: rgba(55, 126, 106, 0.98);
       z-index: 2000;
-      padding: 2rem;
+      padding: 1rem;
       overflow-y: auto;
+      backdrop-filter: blur(5px);
     }
     
     .mobile-menu-content.show {
       display: block;
     }
     
-    .mobile-menu-content .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .mobile-menu-header h3 {
+      color: #fff;
+      margin: 0;
+      font-size: 1.3rem;
+    }
+    
+    .close-btn {
       background: none;
       border: none;
       color: #fff;
-      font-size: 2rem;
+      font-size: 1.8rem;
       cursor: pointer;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background 0.3s;
     }
     
-    .mobile-menu-content h3 {
-      color: #fff;
-      text-align: center;
-      margin-top: 3rem;
+    .close-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
     }
     
     .mobile-menu-links {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
-      margin-top: 2rem;
+      gap: 0.7rem;
+      margin-top: 1rem;
     }
     
     .mobile-menu-links a {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       color: #377e6a;
-      padding: 1rem;
+      padding: 0.9rem;
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
       text-align: center;
-      font-size: 1.1rem;
+      font-size: 1rem;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    
+    .mobile-menu-links a:hover {
+      background: #fff;
+      transform: translateX(5px);
     }
     
     /* Responsive */
@@ -362,6 +364,17 @@
       
       section {
         padding: 1.5rem 1rem;
+      }
+      
+      .floating-buttons {
+        bottom: 15px;
+        right: 15px;
+      }
+      
+      .floating-buttons a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
       }
     }
     
@@ -393,11 +406,114 @@
       margin-top: 1.5rem;
     }
     
+    /* NOUVEAU: Social icons colorés dans la section contact */
+    .contact-social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+    
+    .contact-social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+    
+    .contact-social-icons a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+    }
+    
+    .contact-social-icons .fa-facebook-f { background: #1877F2; }
+    .contact-social-icons .fa-instagram { background: #E4405F; }
+    .contact-social-icons .fa-linkedin-in { background: #0A66C2; }
+    .contact-social-icons .fa-youtube { background: #FF0000; }
+    .contact-social-icons .fa-tiktok { background: #000000; }
+    .contact-social-icons .fa-pinterest { background: #BD081C; }
+    .contact-social-icons .fa-threads { background: #000000; }
+    .contact-social-icons .fa-x-twitter { background: #000000; }
+    .contact-social-icons .fa-envelope { background: #EA4335; }
+    
+    /* Styles pour les évaluations */
+    .evaluations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .evaluation-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: all 0.3s;
+      border-top: 4px solid #377e6a;
+    }
+    
+    .evaluation-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+    
+    .evaluation-card h4 {
+      margin-top: 0;
+      color: #377e6a;
+      font-size: 1.2rem;
+    }
+    
+    .evaluation-card .platform-icon {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+    }
+    
+    .evaluation-card .fa-tripadvisor { color: #00AA87; }
+    .evaluation-card .fa-google { color: #4285F4; }
+    .evaluation-card .fa-star { color: #00B67A; }
+    .evaluation-card .fa-map-marker-alt { color: #FF6B6B; }
+    
+    .evaluation-link {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #377e6a;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+      font-size: 0.9rem;
+    }
+    
+    .evaluation-link:hover {
+      background: #2a5f4e;
+    }
+    
     /* Styles pour les prix */
     .price {
       font-weight: bold;
       color: #377e6a;
       font-size: 1.2rem;
+    }
+    
+    /* Amélioration du bouton WhatsApp */
+    .whatsapp-btn {
+      background: #25D366 !important;
+    }
+    
+    .whatsapp-btn:hover {
+      background: #1DA851 !important;
     }
   </style>
   <!-- Font Awesome CDN -->
@@ -430,36 +546,29 @@
           "https://linkedin.com/company/autour-asia-fr",
           "https://youtube.com/@autourasia"
         ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Circuits Vietnam",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "2 semaines au Vietnam",
-                "description": "Circuit découverte du Vietnam en 14 jours : Nord, Centre et Sud"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "21 jours au Vietnam",
-                "description": "Voyage complet au Vietnam en 3 semaines pour explorer toutes les régions"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Agence locale Hanoi",
-                "description": "Services d'agence locale à Hanoi pour voyages sur mesure au Vietnam"
-              }
-            }
-          ]
-        }
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "127",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Marie & Paul" },
+            "reviewBody": "Un circuit de 14 jours au Vietnam parfaitement organisé : guides compétents, transferts fluides et paysages magnifiques.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "publisher": { "@type": "Organization", "name": "TripAdvisor" }
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Jean-Luc" },
+            "reviewBody": "Nous avons choisi un voyage sur mesure Vietnam. Autour Asia a su adapter l'itinéraire à notre famille avec une organisation impeccable.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "publisher": { "@type": "Organization", "name": "Google" }
+          }
+        ]
       },
       {
         "@type": "WebPage",
@@ -492,6 +601,7 @@
         <a href="#destinations"><i class="fas fa-map-marked-alt"></i> Destinations</a>
         <a href="#itineraire"><i class="fas fa-route"></i> Itinéraires</a>
         <a href="#conseils"><i class="fas fa-lightbulb"></i> Conseils Routard</a>
+        <a href="#evaluations"><i class="fas fa-star"></i> Évaluations</a>
         <a href="#agence"><i class="fas fa-hands-helping"></i> Notre Agence</a>
         <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
       </div>
@@ -664,6 +774,95 @@
     </div>
   </section>
 
+  <!-- Section Évaluations -->
+  <section id="evaluations">
+    <h2><i class="fas fa-star"></i> Évaluations & Avis</h2>
+    <p>Découvrez les avis de nos voyageurs sur les principales plateformes d'évaluation. Notre <strong>agence voyage Vietnam</strong> est fière de ses excellentes notations.</p>
+    
+    <div class="evaluations-grid">
+      <div class="evaluation-card">
+        <div class="platform-icon">
+          <i class="fab fa-tripadvisor"></i>
+        </div>
+        <h4>TripAdvisor</h4>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p>Excellent - 5.0/5</p>
+        <p>+ de 120 avis vérifiés</p>
+        <a href="https://www.tripadvisor.com/Attraction_Review-g293924-d25332963-Reviews-Autour_Asia-Hanoi.html" class="evaluation-link" target="_blank">
+          <i class="fas fa-external-link-alt"></i> Voir les avis
+        </a>
+      </div>
+      
+      <div class="evaluation-card">
+        <div class="platform-icon">
+          <i class="fab fa-google"></i>
+        </div>
+        <h4>Google Maps</h4>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p>Excellent - 5.0/5</p>
+        <p>Notation élevée</p>
+        <a href="https://maps.app.goo.gl/srndk4konUsydU8P8" class="evaluation-link" target="_blank">
+          <i class="fas fa-external-link-alt"></i> Voir sur Google
+        </a>
+      </div>
+      
+      <div class="evaluation-card">
+        <div class="platform-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>Trustpilot</h4>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p>Excellent - 4.8/5</p>
+        <p>Avis clients vérifiés</p>
+        <a href="https://www.trustpilot.com/review/autourasia.com" class="evaluation-link" target="_blank">
+          <i class="fas fa-external-link-alt"></i> Voir les avis
+        </a>
+      </div>
+      
+      <div class="evaluation-card">
+        <div class="platform-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h4>Petit Futé</h4>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p>Recommandé</p>
+        <p>Guide de voyage reconnu</p>
+        <a href="https://www.petitfute.com/v45031-hanoi/c1122-voyage-transports/c747-tours-operateurs/2106006-autour-asia.html" class="evaluation-link" target="_blank">
+          <i class="fas fa-external-link-alt"></i> Voir le guide
+        </a>
+      </div>
+    </div>
+    
+    <div class="astuce">
+      <h4><i class="fas fa-comment"></i> Votre avis compte !</h4>
+      <p>Après votre voyage avec notre <strong>agence francophone Vietnam</strong>, n'hésitez pas à laisser votre avis sur ces plateformes. Cela aide d'autres voyageurs à choisir en toute confiance.</p>
+    </div>
+  </section>
+
   <!-- Section Notre Agence -->
   <section id="agence">
     <h2><i class="fas fa-hands-helping"></i> Notre Agence Locale</h2>
@@ -729,11 +928,17 @@
       <p><i class="fas fa-envelope"></i> <strong>Email</strong> : info@autourasia.fr</p>
       <p><i class="fas fa-clock"></i> <strong>Horaires</strong> : Lundi - Vendredi : 8h30-18h00 (heure locale)</p>
       
-      <div class="social-icons">
-        <a href="https://facebook.com/autourasia" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com/autourasia" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com/company/autour-asia-fr" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://youtube.com/@autourasia" target="_blank"><i class="fab fa-youtube"></i></a>
+      <!-- Social icons avec couleurs améliorées -->
+      <div class="contact-social-icons">
+        <a href="https://facebook.com/autourasia" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/autourasia" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/company/autour-asia-fr" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://youtube.com/@autourasia" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://tiktok.com/@autourasia" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://pinterest.com/autourasia" target="_blank" title="Pinterest"><i class="fab fa-pinterest"></i></a>
+        <a href="https://threads.com/autourasia" target="_blank" title="Threads"><i class="fab fa-threads"></i></a>
+        <a href="https://x.com/autourasia" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+        <a href="mailto:contact@autourasia.fr" title="Email"><i class="fas fa-envelope"></i></a>
       </div>
       
       <a href="https://autourasia.fr/contact.html" class="btn" target="_blank">Demander un devis gratuit</a>
@@ -752,7 +957,7 @@
     <a href="#accueil" id="back-to-top" title="Retour en haut">
       <i class="fas fa-arrow-up"></i>
     </a>
-    <a href="https://wa.me/84971337708" target="_blank" title="Contact WhatsApp">
+    <a href="https://wa.me/84971337708" class="whatsapp-btn" target="_blank" title="Contact WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
     <a href="#" id="mobile-menu-btn" class="mobile-menu-btn" title="Menu">
@@ -760,24 +965,27 @@
     </a>
   </div>
   
-  <!-- Menu mobile -->
+  <!-- Menu mobile compact -->
   <div class="mobile-menu-content" id="mobile-menu">
-    <button class="close-btn" id="close-menu-btn">&times;</button>
-    <h3>Menu du Guide</h3>
+    <div class="mobile-menu-header">
+      <h3>Menu du Guide</h3>
+      <button class="close-btn" id="close-menu-btn" title="Fermer le menu">&times;</button>
+    </div>
     <div class="mobile-menu-links">
       <a href="#accueil"><i class="fas fa-home"></i> Accueil</a>
       <a href="#presentation"><i class="fas fa-book-open"></i> Présentation</a>
       <a href="#infos-pratiques"><i class="fas fa-info-circle"></i> Infos Pratiques</a>
       <a href="#destinations"><i class="fas fa-map-marked-alt"></i> Destinations</a>
       <a href="#itineraire"><i class="fas fa-route"></i> Itinéraires</a>
-      <a href="#conseils"><i class="fas fa-lightbulb"></i> Conseils</a>
+      <a href="#conseils"><i class="fas fa-lightbulb"></i> Conseils Routard</a>
+      <a href="#evaluations"><i class="fas fa-star"></i> Évaluations</a>
       <a href="#agence"><i class="fas fa-hands-helping"></i> Notre Agence</a>
       <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
     </div>
   </div>
 
   <script>
-    // Gestion du menu mobile
+    // Gestion du menu mobile compact
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const closeMenuBtn = document.getElementById('close-menu-btn');
@@ -785,16 +993,27 @@
     mobileMenuBtn.addEventListener('click', function(e) {
       e.preventDefault();
       mobileMenu.classList.add('show');
+      document.body.style.overflow = 'hidden'; // Empêche le défilement
     });
     
     closeMenuBtn.addEventListener('click', function() {
       mobileMenu.classList.remove('show');
+      document.body.style.overflow = 'auto'; // Réactive le défilement
     });
     
     // Fermer le menu en cliquant à l'extérieur
     mobileMenu.addEventListener('click', function(e) {
       if (e.target === mobileMenu) {
         mobileMenu.classList.remove('show');
+        document.body.style.overflow = 'auto';
+      }
+    });
+    
+    // Fermer le menu avec la touche Échap
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('show')) {
+        mobileMenu.classList.remove('show');
+        document.body.style.overflow = 'auto';
       }
     });
     
@@ -818,13 +1037,17 @@
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
           e.preventDefault();
+          
+          // Fermer le menu mobile s'il est ouvert
+          if (mobileMenu.classList.contains('show')) {
+            mobileMenu.classList.remove('show');
+            document.body.style.overflow = 'auto';
+          }
+          
           window.scrollTo({
             top: targetElement.offsetTop - 80,
             behavior: 'smooth'
           });
-          
-          // Fermer le menu mobile après clic
-          mobileMenu.classList.remove('show');
         }
       });
     });
@@ -849,9 +1072,20 @@
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
           link.classList.add('active');
+          // Ajouter un style pour l'élément actif
+          link.style.background = '#fff';
+          link.style.color = '#2a5f4e';
+          link.style.boxShadow = '0 3px 10px rgba(0,0,0,0.2)';
+        } else {
+          link.style.background = '';
+          link.style.color = '';
+          link.style.boxShadow = '';
         }
       });
     });
+    
+    // Initialiser la navigation active
+    window.dispatchEvent(new Event('scroll'));
   </script>
 </body>
 </html>
